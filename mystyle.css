@@ -2,9 +2,15 @@
   font-family: 'Ubuntu', sans-serif !important;
 }
 
-body {
-  color: rgb(28, 28, 30);
+html {
   background-color: #f6f9fc;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  color: rgb(28, 28, 30);
+  background-color: #cbd9e6;
 }
 
 #column-div {
