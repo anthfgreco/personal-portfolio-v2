@@ -1,3 +1,5 @@
+// Face background: #dbc7ff
+
 var currentHour = (new Date()).getHours();
 
 // Morning 0-11

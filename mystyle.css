@@ -16,15 +16,36 @@ body {
 
 h1 {
   font-size: 35px;
-  margin: 0;
+  font-weight: bold;
+  margin: 5px 0 0 0;
 }
 
-p {
-  font-size: 17px;
-  margin: 0;
+h2 {
+  font-size: 19px;
+  font-weight: normal;
+  margin: 5px 0 0 0;
 }
 
 #face-img {
   width: 200px;
   border-radius: 50%;
+  margin: 15px 0 0 0;
+}
+
+#icon-nav {
+  margin: 15px 0 0 0;
+}
+
+li {
+  padding: 0 5px 0 5px !important;
+}
+
+a {
+  fill: #b68fff !important;
+  color: #b68fff !important;
+}
+
+a:hover {
+  fill: #955cff !important;
+  color: #955cff !important;
 }
