@@ -13,7 +13,7 @@
     <script src="lib\uikit-icons.min.js"></script>
 
     <!-- p5.js for canvas drawing -->
-    <script src="lib\p5.min.js"></script>
+    <!-- <script src="lib\p5.min.js"></script> -->
     
     <link rel="stylesheet" href="mystyle.css">
   </head>
@@ -29,14 +29,26 @@
     -->
     <div id="column-div">
       <h1 id="greeting">Hello</h1>
-      <h2>My name is Anthony Greco.</h2>
+      <h2>My name's Anthony Greco.</h2>
       <img id="face-img" src="pictures\artboard purple.png">
 
       <ul id="icon-nav" class="uk-iconnav">
-        <li><a href="https://github.com/anthfgreco"           target="_blank" uk-icon="icon: github; ratio: 1.5"></a></li>
-        <li><a href="https://www.linkedin.com/in/anthfgreco/" target="_blank" uk-icon="icon: linkedin; ratio: 1.5" ></a></li>
-        <li><a href="mailto:anthony1.greco@ryerson.ca"        uk-icon="icon: mail; ratio: 1.5" ></a></li>
-        <li><a href="https://drive.google.com/file/d/13oXcZ-dZNB4hRfmZTwaXkfgVoTk0PgK8/view?usp=sharing" target="_blank" uk-icon="icon: link; ratio: 1.5" ></a></li>
+        <li><a  href="https://github.com/anthfgreco" 
+                target="_blank" uk-icon="icon: github; ratio: 1.5" 
+                uk-tooltip="title: GitHub; pos: top; offset: 4"></a></li>
+        <li><a  href="https://www.linkedin.com/in/anthfgreco/" 
+                target="_blank" 
+                uk-icon="icon: linkedin; ratio: 1.5" 
+                uk-tooltip="title: LinkedIn; pos: top; offset: 4"></a></li>
+        <li><a  href="mailto:anthony1.greco@ryerson.ca" 
+                uk-icon="icon: mail; ratio: 1.5" 
+                uk-tooltip="title: Email; pos: top; offset: 4"></a></li>
+        <li><a  href="" uk-icon="icon: image; ratio: 1.5" 
+                uk-tooltip="title: Photography; pos: top; offset: 4"></a></li>
+        <li><a  href="https://drive.google.com/file/d/13oXcZ-dZNB4hRfmZTwaXkfgVoTk0PgK8/view?usp=sharing" 
+                target="_blank" 
+                uk-icon="icon: link; ratio: 1.5" 
+                uk-tooltip="title: Resume; pos: top; offset: 4"></a></li>
       </ul>
 
     </div>

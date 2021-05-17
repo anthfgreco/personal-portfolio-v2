@@ -33,7 +33,7 @@ h2 {
 }
 
 #icon-nav {
-  margin: 15px 0 0 0;
+  margin: 10px 0 0 0;
 }
 
 li {
@@ -46,6 +46,10 @@ a {
 }
 
 a:hover {
-  fill: #955cff !important;
-  color: #955cff !important;
+  fill: #8747ff !important;
+  color: #8747ff !important;
+}
+
+.uk-tooltip {
+  font-size: 10px;
 }
