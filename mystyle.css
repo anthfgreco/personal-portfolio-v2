@@ -7,8 +7,8 @@ html {
 }
 
 body {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   color: rgb(28, 28, 30);
   background-color: #f6f9fc;
 }
@@ -17,8 +17,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 450px;
-  margin: auto;
+  width: 550px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -48,13 +52,13 @@ li {
 }
 
 a {
-  fill: #b68fff !important;
-  color: #b68fff !important;
+  fill: #ad82ff !important;
+  color: #ad82ff !important;
 }
 
 a:hover {
-  fill: #8747ff !important;
-  color: #8747ff !important;
+  fill: #762dff !important;
+  color: #762dff !important;
 }
 
 .uk-tooltip {
@@ -62,12 +66,19 @@ a:hover {
 }
 
 #paragraph-div {
-  margin: 25px 0 0 0;
+  margin: 0;
 }
 
 p {
   font-size: 18px;
   font-weight: normal;
-  margin: 0 0 0 0;
+  margin: 15px 0 0 0;
+  padding: 0 20px;
   text-align: center;
+}
+
+@media only screen and (max-width: 700px) {
+  #column-div {
+    width: 100%;
+  }
 }
