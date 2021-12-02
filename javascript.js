@@ -2,8 +2,12 @@
 
 var currentHour = (new Date()).getHours();
 
-// Morning 0-11
-if (currentHour <= 11) {
+// Night 0-5
+if (currentHour <= 5) {
+   document.getElementById("greeting").innerHTML = "🌚Hello🌃";
+}
+// Morning 5-11
+else if (currentHour <= 11) {
   document.getElementById("greeting").innerHTML = "☕Good Morning🌅";
 }
 // Afternoon 12-16
