@@ -1,84 +1,14 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="artboard purple.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Anthony Greco</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta charset="UTF-8"> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu" rel="stylesheet">
-    <link rel="icon" href="pictures\artboard purple.png">
-
-    <!-- UIkit  -->
-    <link rel="stylesheet" href="lib\uikit.min.css" />
-    <script src="lib\uikit.min.js"></script>
-    <script src="lib\uikit-icons.min.js"></script>
-
-    <!-- JQuery -->
-    <script src="lib\jquery.js"></script>
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="mystyle.css">
   </head>
-
-  <body ondragstart="return false;" ondrop="return false;">
-    <div id="column-div">
-
-      <h1 id="greeting"></h1>
-
-      <h2>My name's Anthony Greco.</h2>
-
-      <img id="face-img" src="pictures\artboard purple.png">
-
-      <ul id="icon-nav" class="uk-iconnav">
-        <li><a  href="https://github.com/anthfgreco" 
-                target="_blank" 
-                uk-icon="icon: github; ratio: 1.5" 
-                uk-tooltip="title: GitHub; pos: top; offset: 4"></a>
-        </li>
-
-        <li><a  href="https://www.linkedin.com/in/anthfgreco/" 
-                target="_blank" 
-                uk-icon="icon: linkedin; ratio: 1.5" 
-                uk-tooltip="title: LinkedIn; pos: top; offset: 4"></a>
-        </li>
-
-        <li><a  href="mailto:anthony1.greco@ryerson.ca" 
-                uk-icon="icon: mail; ratio: 1.5" 
-                uk-tooltip="title: Email; pos: top; offset: 4"></a>
-        </li>
-
-        <li>
-          <div uk-lightbox="animation: fade">
-            <a  href="pictures\IMG_1001.jpeg" data-caption="Doris McCarthy Trail, Scarborough"
-                uk-icon="icon: image; ratio: 1.5" 
-                uk-tooltip="title: Photography; pos: top; offset: 4"></a>
-            <a href="pictures\IMG_1116.jpeg" data-caption="Port Stanley, London"></a>
-            <a href="pictures\IMG_1003.jpeg" data-caption="Doris McCarthy Trail, Scarborough"></a>
-            <a href="pictures\IMG_1186.jpeg" data-caption="Trees, Maple"></a>
-            <a href="pictures\IMG_2673.jpeg" data-caption="The Danforth Music Hall, Toronto"></a>
-            <a href="pictures\IMG_1238.jpeg" data-caption="Port Credit, Mississauga"></a>
-            <a href="pictures\IMG_1152.jpeg" data-caption="Forks of the Credit, Caledon"></a>
-            <a href="pictures\IMG_1159.jpeg" data-caption="Forks of the Credit, Caledon"></a>
-            <a href="pictures\IMG_1103.jpeg" data-caption="Port Stanley, London"></a>
-            <a href="pictures\IMG_1269.jpeg" data-caption="Sunnybrook Park, Toronto"></a>
-          </div>
-        </li>
-
-        <li><a  href="https://drive.google.com/file/d/13oXcZ-dZNB4hRfmZTwaXkfgVoTk0PgK8/view?usp=sharing" 
-                target="_blank" 
-                uk-icon="icon: link; ratio: 1.5" 
-                uk-tooltip="title: Resume; pos: top; offset: 4"></a>
-        </li>
-      </ul>
-
-      <div id="paragraph-div">
-        <p>I've recently completed a Bachelor of Science (Honours) in Computer Science at Toronto Metropolitan University (formerly Ryerson University).</p>
-        <p>I'm currently looking for software engineering or machine learning positions. My main passion is working with artificial neural networks and evolutionary algorithms to simulate complex, human-like behaviour.</p>
-        <p>Most of my personal projects are available on my GitHub, linked above. I'm currently studying web frameworks such as <a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a> and <a href="https://www.djangoproject.com/">Django</a>.</p> 
-      </div>
-
-    </div>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
-
-  <script type="text/javascript" src="script.js"></script>
 </html>
