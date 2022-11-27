@@ -1,7 +1,6 @@
 function Greeting() {
   let hour = new Date().getHours();
   let greeting = "Hello, I'm Anthony ";
-  hour = 6;
   if (hour <= 4) greeting += "🌝";
   else if (hour <= 11) greeting += "☕";
   else if (hour <= 16) greeting += "😎";
