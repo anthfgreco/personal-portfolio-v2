@@ -18,3 +18,10 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}

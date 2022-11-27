@@ -1,21 +1,18 @@
 function Greeting() {
-  let currentHour = new Date().getHours();
-  let greeting;
-
-  // Night 0-4
-  if (currentHour <= 4) greeting = "🌚Hello🌃";
-  // Morning 5-10
-  else if (currentHour <= 10) greeting = "☕Good Morning🌅";
-  // Afternoon 11-16
-  else if (currentHour <= 16) greeting = "😎Good Afternoon🌞";
-  // Evening 17-20
-  else if (currentHour <= 20) greeting = "🌆Good Evening🌇";
-  // Night 21-23
-  else greeting = "🌚Hello🌃";
+  let hour = new Date().getHours();
+  let greeting = "Hello, I'm Anthony ";
+  hour = 6;
+  if (hour <= 4) greeting += "🌝";
+  else if (hour <= 11) greeting += "☕";
+  else if (hour <= 16) greeting += "😎";
+  else if (hour <= 20) greeting += "🌇";
+  else greeting += "🌝";
 
   return (
-    <div className="Greeting">
-      <h1 className="text-4xl font-semibold">{greeting}</h1>
+    <div>
+      <h1 className="text-3xl font-semibold text-[#202020] dark:text-[#ededed]">
+        {greeting}
+      </h1>
     </div>
   );
 }

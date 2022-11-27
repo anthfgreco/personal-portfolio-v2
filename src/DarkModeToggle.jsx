@@ -1,6 +1,6 @@
-import "./DarkSwitch.css";
+import "./DarkModeToggle.css";
 
-function DarkSwitch({ isDarkMode, setDarkMode }) {
+function DarkModeToggle({ isDarkMode, setDarkMode }) {
   function toggle() {
     setDarkMode(!isDarkMode);
   }
@@ -12,4 +12,4 @@ function DarkSwitch({ isDarkMode, setDarkMode }) {
   );
 }
 
-export default DarkSwitch;
+export default DarkModeToggle;
