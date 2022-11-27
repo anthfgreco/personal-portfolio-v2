@@ -15,8 +15,8 @@ function App() {
 
   function isNight() {
     let hour = new Date().getHours();
-    if (hour <= 5) return true;
-    if (hour <= 17) return false;
+    if (hour < 5) return true;
+    if (hour < 17) return false;
     else return true;
   }
 
@@ -26,11 +26,9 @@ function App() {
 
       <Greeting />
 
-      <img src="/artboard purple.png" className="w-52 rounded-full" />
+      {/*<img src="artboard purple.png" className="w-52 rounded-full" />*/}
 
-      <SocialMediaNavBar />
-
-      <p className="mt-5 text-[#202020] dark:text-[#ededed]">
+      <p className="mt-9 text-[#202020] dark:text-[#ededed]">
         I'm a Computer Science graduate from Toronto Metropolitan University in
         Toronto, Ontario.
       </p>
@@ -41,7 +39,7 @@ function App() {
       </p>
 
       <p className="mt-5 text-[#202020] dark:text-[#ededed]">
-        Most of my personal projects are available on my GitHub, linked above.
+        Most of my personal projects are available on my GitHub, linked below.
         I'm currently learning and making projects with web technologies such as
         React, Tailwind CSS, Flask, and Django.
       </p>
@@ -58,6 +56,8 @@ function App() {
         </a>
         , even for a chat!
       </p>
+
+      <SocialMediaNavBar />
     </div>
   );
 }
