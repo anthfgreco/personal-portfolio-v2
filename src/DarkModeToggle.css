@@ -14,9 +14,6 @@
   --mooncolor: #d9fbff;
   --bgColor--day: #9ee3fb;
 }
-body {
-  transition: all 0.2s ease-in-out;
-}
 .light {
   background: var(--lightbg);
   color: var(--lightt);

@@ -7,6 +7,14 @@ import { useState, useEffect } from "react";
 function App() {
   const [isDarkMode, setDarkMode] = useState(isNight());
 
+  // Prevents flashing and shaking on load, annoying bug
+  useEffect(() => {
+    setTimeout(() => {
+      document.body.classList.remove("preload");
+      document.body.style.transition = "all 0.2s ease-in-out";
+    }, 20);
+  }, []);
+
   useEffect(() => {
     isDarkMode
       ? document.documentElement.classList.add("dark")
