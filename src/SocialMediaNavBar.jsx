@@ -6,7 +6,7 @@ function SocialMediaNavBar() {
     <IconContext.Provider
       value={{
         size: "1.8em",
-        className: "fill-violet-400 hover:fill-violet-600",
+        className: "fill-violet-400 hover:fill-violet-800",
       }}
     >
       <div className="flex space-x-4">
