@@ -31,22 +31,32 @@ function App() {
       <SocialMediaNavBar />
 
       <p className="mt-5 text-[#202020] dark:text-[#ededed]">
-        I've recently completed a Bachelor of Science (Honours) in Computer
-        Science at Toronto Metropolitan University (formerly Ryerson
-        University).
+        I'm a Computer Science graduate from Toronto Metropolitan University in
+        Toronto, Ontario.
       </p>
 
       <p className="mt-5 text-[#202020] dark:text-[#ededed]">
-        I'm currently looking for software engineering or machine learning
-        positions. My main passion is working with artificial neural networks
-        and evolutionary algorithms to simulate complex, human-like behaviour.
+        I'm passionate about finding creative ways to solve problems, especially
+        through technology.
       </p>
 
       <p className="mt-5 text-[#202020] dark:text-[#ededed]">
         Most of my personal projects are available on my GitHub, linked above.
-        I'm currently studying web frameworks such as{" "}
-        <a href="https://flask.palletsprojects.com/en/2.2.x/">Flask</a> and{" "}
-        <a href="https://www.djangoproject.com/">Django.</a>
+        I'm currently learning and making projects with web technologies such as
+        React, Tailwind CSS, Flask, and Django.
+      </p>
+
+      <p className="mt-5 text-[#202020] dark:text-[#ededed]">
+        Looking for software engineering, machine learning, or data scientist
+        positions. Reach me at{" "}
+        <a
+          href="mailto:anthony1.greco@ryerson.ca"
+          target="_blank"
+          className="text-violet-500 hover:text-violet-900"
+        >
+          anthony1.greco@ryerson.ca
+        </a>
+        , even for a chat!
       </p>
     </div>
   );
