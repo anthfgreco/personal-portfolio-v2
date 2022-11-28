@@ -7,6 +7,7 @@ import ProjectsPage from "./ProjectsPage";
 import ErrorPage from "./ErrorPage";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 
+// use createHashRouter instead of createBrowserRouter to fix 404 error when refreshing /projects route
 const router = createHashRouter([
   {
     path: "/",
