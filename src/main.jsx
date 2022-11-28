@@ -5,9 +5,9 @@ import App from "./App";
 import HomePage from "./HomePage";
 import ProjectsPage from "./ProjectsPage";
 import ErrorPage from "./ErrorPage";
-import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
