@@ -13,5 +13,5 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: pwd
       - name: Run build script
-        run: ./deploy.sh
+        run: /home/runner/work/personal-portfolio-v2/personal-portfolio-v2/deploy.sh
         shell: bash
