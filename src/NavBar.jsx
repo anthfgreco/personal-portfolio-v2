@@ -1,7 +1,12 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import DarkModeToggle from "./DarkModeToggle";
 
 function NavBar({ isDarkMode, setDarkMode }) {
+  let activeStyle = {
+    backgroundSize: "100% 3px",
+    backgroundPosition: "0 100%",
+  };
+
   return (
     <nav className="mt-5 flex items-center">
       <h2 className="text-3xl font-semibold tracking-tighter text-[#202020] dark:text-[#ededed]">
@@ -13,18 +18,20 @@ function NavBar({ isDarkMode, setDarkMode }) {
       </div>
 
       <div className="ml-auto">
-        <Link
+        <NavLink
           to="/"
-          className="p-3 font-semibold text-[#202020] dark:text-[#ededed]"
+          className="link-underline link-underline-black p-3 font-semibold text-[#202020] dark:text-[#ededed]"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to="/projects"
-          className="p-3 font-semibold text-[#202020] dark:text-[#ededed]"
+          className="link-underline link-underline-black p-3 font-semibold text-[#202020] dark:text-[#ededed]"
+          style={({ isActive }) => (isActive ? activeStyle : undefined)}
         >
           Projects
-        </Link>
+        </NavLink>
       </div>
     </nav>
   );
