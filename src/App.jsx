@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 
 function App() {
-  const [isDarkMode, setDarkMode] = useState(isNight());
+  const [isDarkMode, setDarkMode] = useState(setInitialDarkMode());
 
   // Prevents flashing and shaking on load, annoying bug
   useEffect(() => {
@@ -15,10 +15,20 @@ function App() {
   }, []);
 
   useEffect(() => {
-    isDarkMode
-      ? document.documentElement.classList.add("dark")
-      : document.documentElement.classList.remove("dark");
+    if (isDarkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
   }, [isDarkMode]);
+
+  function setInitialDarkMode() {
+    if (localStorage.theme == null) return isNight;
+    if (localStorage.theme == "dark") return true;
+    if (localStorage.theme == "light") return false;
+  }
 
   function isNight() {
     let hour = new Date().getHours();
