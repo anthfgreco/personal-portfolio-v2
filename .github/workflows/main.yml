@@ -12,4 +12,6 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: pwd
-      - run: bash path/deploy.sh
+      - name: Run build script
+        run: ./deploy.sh
+        shell: bash
