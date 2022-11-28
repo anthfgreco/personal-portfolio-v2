@@ -3,9 +3,6 @@
 # abort on errors
 set -e
 
-# install
-npm install
-
 # build
 npm run build
 
@@ -17,7 +14,6 @@ echo > .nojekyll
 
 # if you are deploying to a custom domain
 echo 'anthonygreco.xyz' > CNAME
-
 
 git init
 git checkout -B main
