@@ -13,6 +13,8 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: pwd
+      - run: git config --global user.email "anthony1.greco@ryerson.ca"
+      - run: git config --global user.name "Anthony"
       - run: chmod +x ./deploy.sh
       - name: Run build script
         run: ./deploy.sh
