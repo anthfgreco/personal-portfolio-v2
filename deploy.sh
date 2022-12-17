@@ -7,7 +7,7 @@ set -e
 npm run build
 
 # navigate into the build output directory
-cd gh-pages
+cd dist
 
 # place .nojekyll to bypass Jekyll processing
 echo > .nojekyll
