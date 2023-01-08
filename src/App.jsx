@@ -2,6 +2,7 @@ import NavBar from "./NavBar";
 import Greeting from "./Greeting";
 import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
+import UsePageTracking from "./UsePageTracking";
 
 function App() {
   const [isDarkMode, setDarkMode] = useState(setInitialDarkMode());
@@ -36,6 +37,8 @@ function App() {
     if (hour < 17) return false;
     else return true;
   }
+
+  UsePageTracking();
 
   return (
     <div className="m-auto flex max-w-[720px] flex-col px-2">
