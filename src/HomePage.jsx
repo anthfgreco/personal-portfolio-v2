@@ -1,6 +1,11 @@
+import { useEffect } from "react";
 import SocialMediaNavBar from "./SocialMediaNavBar";
 
 function HomePage() {
+  useEffect(() => {
+    document.title = "Anthony Greco";
+  }, []);
+
   return (
     <div>
       {/*<img src="artboard purple.png" className="w-52 rounded-full" />*/}
