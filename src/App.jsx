@@ -4,6 +4,9 @@ import { useState, useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import UsePageTracking from "./UsePageTracking";
 
+const LIGHT = "light";
+const DARK = "dark";
+
 function App() {
   const [isDarkMode, setDarkMode] = useState(setInitialDarkMode());
 
@@ -17,31 +20,29 @@ function App() {
 
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-      localStorage.theme = "dark";
+      document.documentElement.classList.add("dark"); // Tailwind dark mode class
+      localStorage.setItem("theme", DARK);
     } else {
-      document.documentElement.classList.remove("dark");
-      localStorage.theme = "light";
+      document.documentElement.classList.remove("dark"); // Tailwind dark mode class
+      localStorage.setItem("theme", LIGHT);
     }
   }, [isDarkMode]);
 
   function setInitialDarkMode() {
-    if (localStorage.theme == null) return isNight;
-    if (localStorage.theme == "dark") return true;
-    if (localStorage.theme == "light") return false;
-  }
-
-  function isNight() {
-    let hour = new Date().getHours();
-    if (hour < 5) return true;
-    if (hour < 17) return false;
-    else return true;
+    switch (localStorage.getItem("theme")) {
+      case DARK:
+        return true;
+      case LIGHT:
+        return false;
+      default:
+        return false;
+    }
   }
 
   UsePageTracking();
 
   return (
-    <div className="m-auto flex max-w-[720px] flex-col px-2">
+    <div className="m-auto flex max-w-[720px] flex-col px-5">
       <NavBar isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
 
       <Greeting />

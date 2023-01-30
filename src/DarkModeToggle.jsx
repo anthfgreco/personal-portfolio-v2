@@ -1,12 +1,16 @@
 import "./DarkModeToggle.css";
 
 function DarkModeToggle({ isDarkMode, setDarkMode }) {
-  function toggle() {
+  function toggleDarkMode() {
     setDarkMode(!isDarkMode);
   }
 
   return (
-    <div onClick={toggle} className={"tdnn" + (isDarkMode ? "" : " day")}>
+    // Logic to make DarkModeToggle.css styles work correctly
+    <div
+      onClick={toggleDarkMode}
+      className={"tdnn" + (isDarkMode ? "" : " day")}
+    >
       <div className={"moon" + (isDarkMode ? "" : " sun")}></div>
     </div>
   );

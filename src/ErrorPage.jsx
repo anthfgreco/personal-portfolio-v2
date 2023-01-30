@@ -8,12 +8,11 @@ function ErrorPage() {
       <p>{error.status + " " + error.statusText}</p>
       <br />
       <p>
-        Go back:{" "}
         <Link
           to="/"
           className="font-semibold text-violet-500 hover:text-violet-900"
         >
-          Home
+          Go back home
         </Link>
       </p>
     </div>

@@ -1,5 +1,7 @@
 import { useEffect } from "react";
+
 import SocialMediaNavBar from "./SocialMediaNavBar";
+import { EMAIL, MAILTO_EMAIL } from "./global";
 
 function HomePage() {
   useEffect(() => {
@@ -8,36 +10,36 @@ function HomePage() {
 
   return (
     <div>
-      {/*<img src="artboard purple.png" className="w-52 rounded-full" />*/}
-
-      <p className="mt-9 text-[#202020] dark:text-[#ededed]">
+      <p className="mb-5 text-[#202020] dark:text-[#ededed]">
         I'm a Computer Science graduate from Toronto Metropolitan University in
         Toronto, Ontario.
       </p>
 
-      <p className="mt-5 text-[#202020] dark:text-[#ededed]">
+      <p className="mb-5 text-[#202020] dark:text-[#ededed]">
         I'm passionate about finding creative ways to solve problems, especially
         through technology.
       </p>
 
-      <p className="mt-5 text-[#202020] dark:text-[#ededed]">
+      <p className="mb-5 text-[#202020] dark:text-[#ededed]">
         Most of my personal projects are available on my GitHub, linked below.
         I'm currently learning and making projects with web technologies such as
         React, Tailwind CSS, Flask, and Django.
       </p>
 
-      <p className="mt-5 text-[#202020] dark:text-[#ededed]">
-        Looking for software engineering, machine learning, or data scientist
-        positions. Reach me at{" "}
+      <p className="mb-5 text-[#202020] dark:text-[#ededed]">
+        I'm currently looking for a position related to software engineering or
+        machine learning. Reach me at{" "}
         <a
-          href="mailto:anthony1.greco@ryerson.ca"
+          href={MAILTO_EMAIL}
           target="_blank"
           className="text-violet-500 hover:text-violet-900"
         >
-          anthony1.greco@ryerson.ca
+          {EMAIL}
         </a>
         , even for a chat!
       </p>
+
+      <br />
 
       <SocialMediaNavBar />
     </div>
