@@ -1,12 +1,19 @@
 import "./DarkModeToggle.css";
 
-function DarkModeToggle({ isDarkMode, setDarkMode }) {
+interface DarkModeToggleProps {
+  isDarkMode: boolean;
+  setDarkMode: (isDarkMode: boolean) => void;
+}
+
+export function DarkModeToggle({
+  isDarkMode,
+  setDarkMode,
+}: DarkModeToggleProps) {
   function toggleDarkMode() {
     setDarkMode(!isDarkMode);
   }
 
   return (
-    // Logic to make DarkModeToggle.css styles work correctly
     <div
       onClick={toggleDarkMode}
       className={"tdnn" + (isDarkMode ? "" : " day")}
@@ -15,5 +22,3 @@ function DarkModeToggle({ isDarkMode, setDarkMode }) {
     </div>
   );
 }
-
-export default DarkModeToggle;

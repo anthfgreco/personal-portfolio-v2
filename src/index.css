@@ -18,12 +18,6 @@
   --link-underline-color: rgb(139 92 246);
 }
 
-/* this causes flashing and shaking on start, fixed with preload class and useEffect in App.jsx
-body {
-  transition: all 0.2s ease-in-out;
-}
-*/
-
 .preload * {
   transition: none !important;
   -webkit-transition: none !important;

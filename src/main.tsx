@@ -1,20 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import {
-  createHashRouter,
-  Route,
-  createRoutesFromElements,
-  RouterProvider,
-} from "react-router-dom";
-
+import { App } from "./App.tsx";
 import "./index.css";
-import App from "./App";
-import HomePage from "./HomePage";
-import ProjectsPage from "./ProjectsPage";
-import ErrorPage from "./ErrorPage";
+import {
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+} from "react-router-dom";
+import { ErrorPage } from "./pages/ErrorPage.tsx";
+import { HomePage } from "./pages/HomePage.tsx";
+import { ProjectsPage } from "./pages/ProjectsPage.tsx";
 
-// use createHashRouter instead of createBrowserRouter to fix 404 error when refreshing /projects route on GitHub pages
-const router = createHashRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorPage />}>
       <Route path="/" element={<HomePage />}></Route>
@@ -23,7 +21,7 @@ const router = createHashRouter(
   )
 );
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <RouterProvider router={router} />
   </React.StrictMode>

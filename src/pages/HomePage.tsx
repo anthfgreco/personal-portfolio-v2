@@ -1,7 +1,5 @@
-import { useEffect } from "react";
-
-import SocialMediaNavBar from "./SocialMediaNavBar";
-import { EMAIL, MAILTO_EMAIL } from "./global";
+import { SocialMediaNavBar } from "../components/SocialMediaNavBar";
+import { EMAIL, MAILTO_EMAIL } from "../globals";
 
 const emailLink = (
   <a
@@ -20,24 +18,17 @@ const paragraphList = [
   </>,
   <>
     I'm passionate about finding creative ways to solve problems, especially
-    through technology.
+    through technology. Most of my personal projects are available on my GitHub,
+    linked below.
   </>,
+  <>I'm currently working as a software developer at Own Health.</>,
   <>
-    Most of my personal projects are available on my GitHub, linked below. I'm
-    currently learning and making projects with web technologies such as React,
-    Tailwind CSS, Flask, and Django.
-  </>,
-  <>
-    I'm currently looking for a position related to software engineering or
-    machine learning. Reach me at {emailLink}, even for a chat!
+    If you'd like to discuss any opportunities or simply want to chat, feel free
+    to reach me at {emailLink}.
   </>,
 ];
 
-function HomePage() {
-  useEffect(() => {
-    document.title = "Anthony Greco";
-  }, []);
-
+export function HomePage() {
   return (
     <div>
       {paragraphList.map((paragraph, i) => {
@@ -54,5 +45,3 @@ function HomePage() {
     </div>
   );
 }
-
-export default HomePage;
