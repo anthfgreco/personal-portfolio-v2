@@ -11,6 +11,9 @@ import {
 import { ErrorPage } from "./pages/ErrorPage.tsx";
 import { HomePage } from "./pages/HomePage.tsx";
 import { ProjectsPage } from "./pages/ProjectsPage.tsx";
+import { inject } from "@vercel/analytics";
+
+inject();
 
 const router = createBrowserRouter(
   createRoutesFromElements(
