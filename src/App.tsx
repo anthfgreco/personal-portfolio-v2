@@ -8,8 +8,10 @@ function isItDarkOutside() {
 }
 
 function Greeting() {
-  var hour = new Date().getHours();
-  var greeting = "Hi, I'm Anthony Greco ";
+  const hour = new Date().getHours();
+
+  let greeting = "Hey, I'm Anthony Greco ";
+
   if (hour < 4) greeting += "🌝";
   else if (hour < 11) greeting += "☕";
   else if (hour < 16) greeting += "😎";
@@ -36,11 +38,12 @@ export function App() {
     }, 20);
   }, []);
 
+  // Toggle dark mode
   useEffect(() => {
     if (isDarkMode) {
-      document.documentElement.classList.add("dark"); // Tailwind dark mode class
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove("dark"); // Tailwind dark mode class
+      document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
